@@ -16,7 +16,7 @@ const app = express();
 app.use(session({
   resave: false, // pas d'enregistrement si aucune modif
   saveUninitialized: false, // session pas créé jusqua ce que une donnée sois créé
-  secret: 'my very secret secret'
+  secret: process.env.SESSION_SECRET
 }))
 
 // view engine setup

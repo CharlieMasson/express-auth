@@ -28,7 +28,7 @@ router.post('/', async (req, res, next) => {
     req.session.token = token;
     req.session.email = user.email;
   
-    res.json({ message: 'Authentification réussie', token });
+    res.send('Authentification réussie <a href="/">Retour à l\'accueil</a>');
   });
 
 module.exports = router;
